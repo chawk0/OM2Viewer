@@ -1,0 +1,9 @@
+C:\Users\Phil\Programming\OpenMOO2Viewer\bin\Debug\OpenMOO2Viewer.exe
+C:\Users\Phil\Programming\OpenMOO2Viewer\bin\Debug\OpenMOO2Viewer.pdb
+C:\Users\Phil\Programming\OpenMOO2Viewer\obj\x86\Debug\OpenMOO2Viewer.mainForm.resources
+C:\Users\Phil\Programming\OpenMOO2Viewer\obj\x86\Debug\OpenMOO2Viewer.Properties.Resources.resources
+C:\Users\Phil\Programming\OpenMOO2Viewer\obj\x86\Debug\OpenMOO2Viewer.exe
+C:\Users\Phil\Programming\OpenMOO2Viewer\obj\x86\Debug\OpenMOO2Viewer.pdb
+C:\Users\Phil\Programming\OpenMOO2Viewer\bin\Debug\OpenMOO2Viewer.exe.config
+C:\Users\Phil\Programming\OpenMOO2Viewer\obj\x86\Debug\OpenMOO2Viewer.csprojResolveAssemblyReference.cache
+C:\Users\Phil\Programming\OpenMOO2Viewer\obj\x86\Debug\OpenMOO2Viewer.csproj.GenerateResource.Cache

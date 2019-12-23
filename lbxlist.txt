@@ -1,0 +1,585 @@
+AMEBAFIN.LBX
+	smacker video: giant space ameoba eating a planet?
+
+ANATKFIN.LBX
+	smacker video: random Antaren attack
+
+ANTARMSG.LBX
+	LBX, 48 blocks, 0xCC bytes each
+
+	some simple string format:
+	0x0000	2 bytes		0x0001 (font number?)
+	0x0002	2 bytes		length (4 less than block length)
+	0x0004	~~		message
+	0x00CC	start of next block
+
+ANTAROOM.LBX
+	LBX, 2 blocks
+
+	a game cursor image
+	antaren meeting animation showing the big spidery alien wiggling about
+
+ANWINFIN.LBX
+	smacker video: blowing up the Antaren homeworld and spidey alien roaring and dying
+
+APP_PICS.LBX
+	LBX, 212 blocks
+
+	the golden wireframe cube backdrop plus 211 180px width images of the various items, buildings, and techs.  every image seems to have an internal palette
+
+BEAMS.LBX
+	LBX, 153 blocks
+
+	various beam, interceptor(?), and shield-hit animations.  some random "lone" internal palette blocks in there, too.
+
+BILLTEX2.LBX
+	LBX, 169 blocks
+
+	various game strings like 'Colony' and 'Shields' and full prompts like "Are you wish to declare war?" etc
+
+BILLTEXT.LBX
+	LBX, 469 blocks
+	various game strings like 'BIOLOGY' and research messages and other large prompts
+
+BLDG0.LBX
+	LBX, 360 blocks
+
+	single frame images of all of the various colony buildings as rendered in the colony view screen, from all the various locations each of the buildings can appear.  seem to works with fonts.lbx:002.
+
+BLDG1.LBX
+	same as BLDG0.LBX
+
+BLDG2.LBX
+	same as BLDG0.LBX
+
+BLDG3.LBX
+	same as BLDG0.LBX
+
+BLDG4.LBX
+	same as BLDG0.LBX
+
+BLDG5.LBX
+	LBX, 1 block, just the header
+
+BUFFER0.LBX
+	LBX, 288 blocks
+
+	the main game screen showing the right sidebar and the galaxy view
+
+	various game UI elements, typically a pair of images for each control: an active state and inactive state.  e.g. "GAME", "Colonies | Planets | Fleets" buttons, 
+	
+	various small icons shown on the galaxy view, like the various colored arrows next to colony planets, warp gate icons on a system, artemis net indicators, etc
+
+	various UI frame things like a grid of squares for the fleet grid of ships, scrollbars, arrows, etc
+
+	images for the various star colors at various zoom levels
+
+	rotating planet sprites animations at certain zoom levels
+
+	galaxy view icons for space monsters and ships
+	
+CMBTFGTR.LBX
+	LBX, 80 blocks
+
+	sprites for interceptors in the battle screen
+
+CMBTMISL.LBX
+	LBX, 176 blocks
+
+	sprites for various missiles, plasma blobs, torps, phasors?, bombs. seems to work with palette fonts.lbx:004.  there's a region of 0-length blocks around 112 to 143'ish
+
+CMBTPLNT.LBX
+	LBX, 63 blocks
+	
+	single images for 10-11 planets as seen in the battle screen.  each planet is a series of different zoom levels or sizes, followed by a "lone" internal palette block used to render the previous images.
+
+CMBTSFX.LBX
+	LBX, 79 blocks
+
+	various explosion, beam, whirly things, etc sprites. many work with palette fonts.lbx:004, but not all.
+
+	plus space monster death sprites as seen in battle screen?
+
+	frame 1 has some kind of wonky format, it's lacking a frame header? there's palettized data only, so it doesn't use the normal encoding scheme perhaps?
+
+CMBTSHP.LBX
+	LBX, 360 blocks
+
+	sprites for the various player ships in the battle screen
+
+	there are 8 colors to pick from, 5 ship classes with 8 variations of ship sprite, plus 3 star base structures, 1 doom star, then a lone internal palette block
+
+	8 * (5 * 8 + 3 + 1 + 1) = 360 blocks
+
+	lock the internal palette at the end, and the previous 44 blocks render nicely.
+
+	each ship sprite has 20 frames showing 1 quarter turn of rotation, plus the rocket thrusters animation in between
+
+
+COLBLDG.LBX
+	LBX, 7 blocks
+
+	this is the main display frame (640x480) for the colony build screen, including 2-frame "pushed"/"not pushed" animations for the cancel, auto build, ok, refit, design, and repeat build buttons.
+
+	lock the ipal in the first main image to render the buttons
+
+COLGCBT.LBX
+	LBX, 22 blocks
+
+	sprites for the various ground combat troops and tanks, etc. includes the battle summary "frame" at the end
+
+	looks good in palette fonts.lbx:002
+
+COLONY.LBX
+	LBX, 19 blocks
+
+	some random medallion, a few problem blocks at the beginning, plus a 640x480 73-frame animation of the colony ships landing on a new world
+
+	several single frame sprites of the orbital structures as seen in colony view
+
+	a 50-frame animation of the "production meter" 3d box that fills up as a job is completed.  first there's one in a transparent color, and a 2nd one in green that fills in
+	
+COLONY2.LBX
+	LBX, 53 blocks
+
+	various colony view icons like the corn cobs, mining picks, glass vials, gold coin, pollution can, and a darkly shaded variant of them all
+
+	morale icons, government type icons
+
+	also a series of the mini-icons for food, prod, science, etc as seen in the colony list view
+
+	ends with a 640x480 starry backdrop, a random rocky planet static sprite, a little dialog window with a green "display" area at the top, and a teeny tiny red arrow cursor
+
+COLPUPS.LBX
+	LBX, 23 blocks
+
+	apparently unused UI elements controlling genocide, slavery, liberal, etc governing policies for captured races.
+
+	the main frame for the colony view showing system's planet list, bc, food, prod and sci output, work distribution and morale, and currently building item
+
+	some unused colony name / colony population window
+
+	scrollbar arrows and some buttons
+
+COLPUSP.LBX
+	seemingly identical to colpups.lbx?
+
+COLREFIT.LBX
+	LBX, 5 blocks
+
+	ship refit view frame, including ship grid and ship info pane
+
+	couple of UI elements, scrollbar arrows, button, and a dialog window
+
+COLROADS.LBX
+	LBX, 156 blocks
+
+	static sprites of roads in the various angles they can appear in colony view, looks good in palette fonts.lbx:002
+
+COLSUM.LBX
+	LBX, 22 blocks
+
+	main colony list view frame, various UI elements used therein, and an lone ipal block at the end for rendering it all
+
+COLSYSDI.LBX
+	LBX, 66 blocks
+
+	couple of random small UI windows, looks good in palette fonts.lbx:004
+
+	plus about 57'ish mini wireframe planet static sprites in 11'ish colors and 5'ish zoom levels, and the tiny little arrow that shows a currently occupied colony
+
+COLVEGGI.LBX
+	LBX, 104 blocks
+
+	various static sprites of the vegetation and other natural features that appear on the colony view
+	
+COMBAT.LBX
+	LBX, 90 blocks
+
+	battle view bottom frame showing ship displays, command buttons, etc
+
+	random dozen or two blocks that don't seem to load yet, plus the ship select cursor brackets
+
+	some UI buttons, the missile warning alert with the animated red glowy sidebars, battle options panel
+
+	raid/capture ship dialog, structure/armor/shield "hp bars"
+
+	starry backdrops presumably in battle view
+	
+CONFIRM.LBX
+	LBX, 3 blocks
+
+	large confirmation UI window? plus some buttons, large ipal in it too!
+
+COUNCIL.LBX
+	LBX, 197 blocks
+
+	pointy hand 'n finger mouse cursor plus ipal for next block
+
+	10-frame sprite for main council chamber view screen and its "shimmering" or something? fade-in?
+
+	a series of 156x 10-frame animations showing a particular race ambassador's face wiggling idle on the council chamber's "display bubbles" at the top, in 3 zoom levels, plus left and right views, and greyed-out versions of all of them too (those are just 1 frame)
+
+	13 races * 12 views (2x for active/inactive, 3x zooms, 2x for left/right view) = 156
+
+	a series of "holo projector" views for each race ambassador when in front of the council, 10-frame sprites, 2x for left/right views, 13x races
+
+	followed by another set of "holo projector" views but they're fullscreen 640x480, still 10-frame sprites, but it's a centered view
+
+COUNCMSG.LBX
+	LBX, 84 blocks
+
+	some simple string format:
+	0x0000	2 bytes		0x0001 (font number?)
+	0x0002	2 bytes		length (4 less than block length)
+	0x0004	~~		message
+	0x00CC	start of next block
+
+	various messages relating to winning the game and being elected ruler of the galaxy, lots of praising messages, then they're presumably repeated in other languages
+
+CREDITS.LBX
+	LBX, 1 block
+
+	16657 bytes, it's the text block for the credits that scroll on the main menu view.  possible formatting bytes in there, not sure on string separation
+
+CUSTMSTR.LBX
+	LBX, 4 blocks
+
+	contains strings for the various racial picks, possibly repeated a time or two, plus some random junk at the end
+
+DESIGN.LBX
+	
+DIMTVFIN.LBX
+DIPLOMAT.LBX
+DIPLOMSE.LBX
+DIPLOMSF.LBX
+DIPLOMSG.LBX
+DIPLOMSS.LBX
+DIPSTARS.LBX
+ENGMSG.LBX
+ESTRINGS.LBX
+EVENTMSE.LBX
+EVENTMSF.LBX
+EVENTMSG.LBX
+EVENTMSS.LBX
+EVENTS.LBX
+FILEDATA.LBX
+FIREPTS.LBX
+FLEET.LBX
+FLTICONS.LBX
+FONTS.LBX
+GAME.LBX
+GENWINFN.LBX
+GSTAR.LBX
+HELP.LBX
+HERODATA.LBX
+HESTRNGS.LBX
+IFONTS.LBX
+INBOX.LBX
+INFO.LBX
+INSTALL.LBX
+INTRO.LBX
+JIMTEXT.LBX
+JIMTEXT2.LBX
+KENTEXT.LBX
+KENTEXT1.LBX
+LOADSAVE.LBX
+LOGO.LBX
+LOSERFIN.LBX
+MAINMENU.LBX
+MAINPUPS.LBX
+MAINTEXT.LBX
+MONSTER.LBX
+MSGENG.LBX
+MULTIGM.LBX
+NDATA.LBX
+NEWGAME.LBX
+NEXTPLYR.LBX
+OCPOL.LBX
+OFFICER.LBX
+ORIONFIN.LBX
+PATCH13.LBX
+PLANETS.LBX
+PLAYSPEC.LBX
+PLNTDFIN.LBX
+PLNTSUM.LBX
+RACEICON.LBX
+RACENAME.LBX
+RACEOPT.LBX
+RACERPRT.LBX
+RACES.LBX
+RACESEL.LBX
+RACESTUF.LBX
+REFITPUP.LBX
+RSTRING0.LBX
+SCIENCE.LBX
+SCORE.LBX
+SHIPNAME.LBX
+SHIPS.LBX
+SKILDESC.LBX
+SOUND.LBX
+SPHERSFX.LBX
+SR_R0_SC.LBX
+SR_R0_SP.LBX
+SR_R0_TR.LBX
+SR_R1_SC.LBX
+SR_R1_SP.LBX
+SR_R1_TR.LBX
+SR_R2_SC.LBX
+SR_R2_SP.LBX
+SR_R2_TR.LBX
+SR_R3_SC.LBX
+SR_R3_SP.LBX
+SR_R3_TR.LBX
+SR_R4_SC.LBX
+SR_R4_SP.LBX
+SR_R4_TR.LBX
+SR_R5_SC.LBX
+SR_R5_SP.LBX
+SR_R5_TR.LBX
+SR_R6_SC.LBX
+SR_R6_SP.LBX
+SR_R6_TR.LBX
+SR_R7_SC.LBX
+SR_R7_SP.LBX
+SR_R7_TR.LBX
+SR_R8_SC.LBX
+SR_R8_SP.LBX
+SR_R8_TR.LBX
+SR_R9_SC.LBX
+SR_R9_SP.LBX
+SR_R9_TR.LBX
+SR_RA_SC.LBX
+SR_RA_SP.LBX
+SR_RA_TR.LBX
+SR_RB_SC.LBX
+SR_RB_SP.LBX
+SR_RB_TR.LBX
+SR_RC_SC.LBX
+SR_RC_SP.LBX
+SR_RC_TR.LBX
+STARBG.LBX
+STARNAME.LBX
+STREAM.LBX
+STREAMHD.LBX
+SYSDISP.LBX
+TANM_001.LBX
+TANM_002.LBX
+TANM_003.LBX
+TANM_004.LBX
+TANM_005.LBX
+TANM_006.LBX
+TANM_007.LBX
+TANM_008.LBX
+TANM_009.LBX
+TANM_010.LBX
+TANM_011.LBX
+TANM_012.LBX
+TANM_013.LBX
+TANM_014.LBX
+TANM_015.LBX
+TANM_016.LBX
+TANM_017.LBX
+TANM_018.LBX
+TANM_019.LBX
+TANM_020.LBX
+TANM_021.LBX
+TANM_022.LBX
+TANM_023.LBX
+TANM_024.LBX
+TANM_025.LBX
+TANM_026.LBX
+TANM_027.LBX
+TANM_028.LBX
+TANM_029.LBX
+TANM_030.LBX
+TANM_031.LBX
+TANM_032.LBX
+TANM_033.LBX
+TANM_034.LBX
+TANM_035.LBX
+TANM_036.LBX
+TANM_037.LBX
+TANM_038.LBX
+TANM_039.LBX
+TANM_040.LBX
+TANM_041.LBX
+TANM_042.LBX
+TANM_043.LBX
+TANM_044.LBX
+TANM_045.LBX
+TANM_046.LBX
+TANM_047.LBX
+TANM_048.LBX
+TANM_049.LBX
+TANM_050.LBX
+TANM_051.LBX
+TANM_052.LBX
+TANM_053.LBX
+TANM_054.LBX
+TANM_055.LBX
+TANM_056.LBX
+TANM_057.LBX
+TANM_058.LBX
+TANM_059.LBX
+TANM_060.LBX
+TANM_061.LBX
+TANM_062.LBX
+TANM_063.LBX
+TANM_064.LBX
+TANM_065.LBX
+TANM_066.LBX
+TANM_067.LBX
+TANM_068.LBX
+TANM_069.LBX
+TANM_070.LBX
+TANM_071.LBX
+TANM_072.LBX
+TANM_073.LBX
+TANM_074.LBX
+TANM_075.LBX
+TANM_076.LBX
+TANM_077.LBX
+TANM_078.LBX
+TANM_079.LBX
+TANM_080.LBX
+TANM_081.LBX
+TANM_082.LBX
+TANM_083.LBX
+TANM_084.LBX
+TANM_085.LBX
+TANM_086.LBX
+TANM_087.LBX
+TANM_088.LBX
+TANM_089.LBX
+TANM_090.LBX
+TANM_091.LBX
+TANM_092.LBX
+TANM_093.LBX
+TANM_094.LBX
+TANM_095.LBX
+TANM_096.LBX
+TANM_097.LBX
+TANM_098.LBX
+TANM_099.LBX
+TANM_100.LBX
+TANM_101.LBX
+TANM_102.LBX
+TANM_103.LBX
+TANM_104.LBX
+TANM_105.LBX
+TANM_106.LBX
+TANM_107.LBX
+TANM_108.LBX
+TANM_109.LBX
+TANM_110.LBX
+TANM_111.LBX
+TANM_112.LBX
+TANM_113.LBX
+TANM_114.LBX
+TANM_115.LBX
+TANM_116.LBX
+TANM_117.LBX
+TANM_118.LBX
+TANM_119.LBX
+TANM_120.LBX
+TANM_121.LBX
+TANM_122.LBX
+TANM_123.LBX
+TANM_124.LBX
+TANM_125.LBX
+TANM_126.LBX
+TANM_127.LBX
+TANM_128.LBX
+TANM_129.LBX
+TANM_130.LBX
+TANM_131.LBX
+TANM_132.LBX
+TANM_133.LBX
+TANM_134.LBX
+TANM_135.LBX
+TANM_136.LBX
+TANM_137.LBX
+TANM_138.LBX
+TANM_139.LBX
+TANM_140.LBX
+TANM_141.LBX
+TANM_142.LBX
+TANM_143.LBX
+TANM_144.LBX
+TANM_145.LBX
+TANM_146.LBX
+TANM_147.LBX
+TANM_148.LBX
+TANM_149.LBX
+TANM_150.LBX
+TANM_151.LBX
+TANM_152.LBX
+TANM_153.LBX
+TANM_154.LBX
+TANM_155.LBX
+TANM_156.LBX
+TANM_157.LBX
+TANM_158.LBX
+TANM_159.LBX
+TANM_160.LBX
+TANM_161.LBX
+TANM_162.LBX
+TANM_163.LBX
+TANM_164.LBX
+TANM_165.LBX
+TANM_166.LBX
+TANM_167.LBX
+TANM_168.LBX
+TANM_169.LBX
+TANM_170.LBX
+TANM_171.LBX
+TANM_172.LBX
+TANM_173.LBX
+TANM_174.LBX
+TANM_175.LBX
+TANM_176.LBX
+TANM_177.LBX
+TANM_178.LBX
+TANM_179.LBX
+TANM_180.LBX
+TANM_181.LBX
+TANM_182.LBX
+TANM_183.LBX
+TANM_184.LBX
+TANM_185.LBX
+TANM_186.LBX
+TANM_187.LBX
+TANM_188.LBX
+TANM_189.LBX
+TANM_190.LBX
+TANM_191.LBX
+TANM_192.LBX
+TANM_193.LBX
+TANM_194.LBX
+TANM_195.LBX
+TANM_196.LBX
+TANM_197.LBX
+TANM_198.LBX
+TANM_199.LBX
+TANM_200.LBX
+TANM_201.LBX
+TANM_202.LBX
+TANM_203.LBX
+TANM_204.LBX
+TANM_205.LBX
+TANM_206.LBX
+TANM_207.LBX
+TANM_208.LBX
+TANM_209.LBX
+TANM_210.LBX
+TANM_211.LBX
+TANM_212.LBX
+TANM_213.LBX
+TECHDESC.LBX
+TECHNAME.LBX
+TECHSEL.LBX
+TEXTBOX.LBX
+TURNSUM.LBX
+WARNING.LBX
+WININFIN.LBX

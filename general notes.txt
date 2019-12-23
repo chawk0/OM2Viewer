@@ -1,0 +1,20 @@
+pollution:
+	2 * planet size class (1 - 5) determines the production cap before pollution kicks in
+	any production exceeding cap is divided by 2 to produce the pollution penalty
+	static production bonuses from things like autofactories (+5) are IGNORED, except
+	Robotic Factory!
+
+	basically, once you start polluting, you get half the production-per-worker
+	this makes pollution control techs quite nice!
+
+	pollution processor and atmospheric renewer divide the total production value by some
+	factor and use that modified amount to compare against the production cap
+
+	pollution processor is /2, atmospheric renewer is /4.  the combination is /8!
+
+	Nano Disassemblers will double the production cap for a planet before pollution kicks in
+
+	
+
+	
+	

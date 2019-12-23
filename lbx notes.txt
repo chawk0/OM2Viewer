@@ -1,0 +1,16 @@
+----STARNAME.LBX----
+
+2 LBX blocks
+
+holds the default homeworld names and all the random star system names
+
+the block format appears to have a 4 byte header:
+
+0000	2 bytes		number of text entries
+0002	2 bytes		length of each entry
+
+followed by (num_entries * entry_length) bytes
+
+
+
+
